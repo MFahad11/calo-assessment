@@ -53,3 +53,17 @@ Got it! Here's the next section for the README to guide project initiation for b
    ```
 
 ---
+
+## Time Report
+
+### Server Development
+
+Time spent: **2 hours**
+
+### Client Development
+
+Time spent: **2.5 hours**
+
+### Total Time
+
+Total time spent on the project: **4.5 hours**
