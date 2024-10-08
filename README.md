@@ -26,7 +26,7 @@ A simple backend and frontend service scheduling and managing jobs that retrieve
 4. Start the server:
 
    ```bash
-   npm run start
+   node index.js
    ```
 
 ### Client Setup
