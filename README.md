@@ -1,9 +1,6 @@
 # Calo-Assessment
 A simple backend and frontend service scheduling and managing jobs that retrieve random Unsplash images from the food category. This API supports creating, tracking, and retrieving job results with delayed execution.
-Got it! Here's the next section for the README to guide project initiation for both the server and client:
-
 ---
-
 ## Project Setup
 
 ### Server Setup
