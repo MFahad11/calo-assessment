@@ -4,7 +4,7 @@ import {
   useQueryClient,
 } from '@tanstack/react-query'
 import axiosInstance from '..'
-
+import toast from 'react-hot-toast'
 export const useGetAllJobsQuery = (params:{
     status?:string,
     sort?:string,
@@ -38,10 +38,15 @@ export const useCreateJobMutation = () => {
             const response = await axiosInstance.post('/jobs', newJob)
             return response.data
         },
-        onSuccess: () => {
+        onSuccess: (response) => {
+            console.log(response)
+            toast.success(`Job created with id ${response.id}`)
             queryClient.invalidateQueries({
                 queryKey: ['jobs']
             })
+        },
+        onError: (error) => {
+            toast.error('Failed to create job')
         }
     })
     return { mutate, isPending, error }

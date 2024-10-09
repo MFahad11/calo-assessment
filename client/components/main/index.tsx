@@ -9,6 +9,8 @@ import { useCreateJobMutation, useGetAllJobsQuery, useGetJobByIdQuery } from '@/
 import Link from 'next/link'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import Pagination from '../pagination'
+import Loader from '../ui/loader'
+import Error from '../ui/error'
 
 
 export default function MainComponent() {
@@ -98,9 +100,9 @@ export default function MainComponent() {
       </div>
       {
         isLoading ? (
-          <p>Loading...</p>
+          <Loader/>
         ) : error ? (
-          <p>Error: {error.message}</p>
+          <Error message='An error occurred while fetching jobs' />
         ) : (
             <div>
             <Table>
@@ -153,8 +155,10 @@ export default function MainComponent() {
           <DialogHeader>
             <DialogTitle>Job Details</DialogTitle>
           </DialogHeader>
-            {jobIsLoading && <p>Loading...</p>}
-            {jobError && <p>Error: {jobError.message}</p>}
+            {jobIsLoading && <Loader/>}
+            {jobError && <Error 
+              message='An error occurred while fetching job details'
+            />}
           {jobData && (
             <div>
               <p><strong>Job ID:</strong> {jobData.id}</p>

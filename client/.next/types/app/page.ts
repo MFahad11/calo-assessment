@@ -1,4 +1,4 @@
-// File: C:\Users\HP 440 G6\Desktop\assesment\client\app\page.tsx
+// File: C:\Users\HP 440 G6\Desktop\calo-assessment\client\app\page.tsx
 import * as entry from '../../../app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
