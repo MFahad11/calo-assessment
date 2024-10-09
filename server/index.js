@@ -42,7 +42,7 @@ async function processJob(jobId) {
   }
 
   try {
-    const response = await axios.get('https://api.unsplash.com/photos/random?food', {
+    const response = await axios.get('https://api.unsplash.com/photos/random?query=food', {
       headers: {
         Authorization: `Client-ID ${process.env.UNSPLASH_ACCESS_KEY}`
       }
